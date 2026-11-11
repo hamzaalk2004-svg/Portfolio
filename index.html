@@ -3,33 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Hamza, développeur web">
-  <title>Hamza | Développeur web</title>
+  <meta name="description" content="DESCRIPTION DE LA PAGE">
+  <title>TITRE DE LA PAGE | Hamza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="progress"></div>
 
   <header>
     <nav>
-      <a href="#accueil" class="logo">Hamza</a>
-      <ul>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="index.html" class="logo">Hamza<span>.</span></a>
+      <ul id="menu">
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Changer de thème"></button>
+        <button id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section id="accueil"></section>
-    <section id="apropos"></section>
-    <section id="competences"></section>
-    <section id="projets"></section>
-    <section id="contact"></section>
+    <section id="accueil">
+      <p class="eyebrow">Bonjour, je suis</p>
+      <h1>Hamza</h1>
+      <h2><span id="typing"></span><span class="caret"></span></h2>
+      <p>[Ta phrase d'accroche]</p>
+      <div class="hero-buttons">
+        <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
+        <a href="contact.html" class="btn btn-ghost">Me contacter</a>
+      </div>
+    </section>
+  
+    <section id="explorer">
+      <h2>Explorer</h2>
+      <div class="explore">
+        <a href="apropos.html" class="card-link">
+          <h3>À propos</h3>
+          <p>Mon parcours et ce qui me motive.</p>
+          <span>Découvrir →</span>
+        </a>
+        <a href="competences.html" class="card-link">
+          <h3>Compétences</h3>
+          <p>Les technologies et outils que je maîtrise.</p>
+          <span>Découvrir →</span>
+        </a>
+        <a href="projets.html" class="card-link">
+          <h3>Projets</h3>
+          <p>Mes réalisations, avec le code source.</p>
+          <span>Découvrir →</span>
+        </a>
+        <a href="contact.html" class="card-link">
+          <h3>Contact</h3>
+          <p>Une question, une opportunité ? Écris-moi.</p>
+          <span>Découvrir →</span>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>&copy; 2026 Hamza. Tous droits réservés.</p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
