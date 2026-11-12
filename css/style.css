@@ -520,3 +520,20 @@ nav ul a.active::after { width: 100%; }
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
+  /* ===== Formulaire de contact ===== */
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-status {
+  min-height: 1.5em;
+  font-weight: 500;
+}
+.form-status.success { color: #22c55e; }
+.form-status.error { color: #ef4444; }
+
+#contact form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}

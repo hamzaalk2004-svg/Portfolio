@@ -15,7 +15,7 @@
 
   <header>
     <nav>
-      <a href="index.html" class="logo">Hamza<span>.</span></a>
+      <a href="index.html" class="logo">Hamza Alkoum<span>.</span></a>
       <ul id="menu">
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="competences.html">Compétences</a></li>
@@ -34,25 +34,29 @@
   <main>
     <section id="contact">
       <h1 class="page-title">Contact</h1>
-      <p>[Une phrase pour inviter à te contacter.]</p>
+      <p class="intro">Une question, un projet, une opportunité ? Écrivez-moi, je réponds rapidement.</p>
   
-      <form>
+      <form id="contact-form" action="https://formspree.io/f/mzerzarg" method="POST">
         <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required>
+        <input type="text" id="nom" name="nom" autocomplete="name" required>
   
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
   
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
   
+        <!-- Champ piège anti-spam : invisible pour les humains -->
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+  
         <button type="submit" class="btn btn-primary">Envoyer</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
   
       <ul>
-        <li><a href="mailto:ton@email.com">ton@email.com</a></li>
-        <li><a href="https://github.com/TON-PSEUDO">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/TON-PROFIL">LinkedIn</a></li>
+        <li><a href="mailto:ton@email.com">hamzaalk2004@gmail.com</a></li>
+        <li><a href="https://github.com/hamzaalk2004-svg" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/TON-PROFIL" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </section>
   </main>

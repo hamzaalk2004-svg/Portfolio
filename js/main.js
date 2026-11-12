@@ -123,3 +123,38 @@ document.querySelectorAll('article').forEach(card => {
     card.style.transform = '';
   });
 });
+// ===== 9. Formulaire de contact =====
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const button = contactForm.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    formStatus.className = 'form-status';
+    formStatus.textContent = '';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Erreur serveur');
+
+      formStatus.textContent = 'Merci ! Votre message a bien été envoyé.';
+      formStatus.classList.add('success');
+      contactForm.reset();
+    } catch (error) {
+      formStatus.textContent = "Une erreur est survenue. Vous pouvez m'écrire directement par email.";
+      formStatus.classList.add('error');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Envoyer';
+    }
+  });
+}
