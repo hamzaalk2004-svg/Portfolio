@@ -514,3 +514,9 @@ nav ul a.active::after { width: 100%; }
     }
     html { scroll-behavior: auto; }
   }
+  .intro {
+    max-width: 640px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
